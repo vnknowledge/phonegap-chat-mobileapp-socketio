@@ -1,0 +1,47 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"SocketIO\"><param name=\"android-package\" value=\"plugin.socket.io.SocketIO\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "plugin.socket.io": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "plugin.socket.io.SocketIO",
+            "file": "plugins/plugin.socket.io/www/socketio.js",
+            "pluginId": "plugin.socket.io",
+            "clobbers": [
+                "plugin.socket.io"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "plugin.socket.io": "1.0.0",
+        "cordova-plugin-whitelist": "1.3.0"
+    }
+}
