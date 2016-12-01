@@ -5,7 +5,11 @@
 
 ## Attention:
   1. Use CORS and import **Content-Policy** index.html in two project into client folder:
-    * <meta http-equiv="Content-Security-Policy" content="default-src * gap: ws: https://ssl.gstatic.com;img-src 'self' data: content:;style-src 'self' 'unsafe-inline' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+
+    ```html
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap: ws: https://ssl.gstatic.com;img-src 'self' data: content:;style-src 'self' 'unsafe-inline' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+    ```    
+    
   2. Use CORS into express server:
   ```javascript
   app.use(function(req, res, next) {
